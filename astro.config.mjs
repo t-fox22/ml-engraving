@@ -6,5 +6,5 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   vite: { plugins: [tailwindcss()] },
   site: 'https://t-fox22.github.io/',
-  base: '/',
+  base: '/ml-engraving/',
 });
