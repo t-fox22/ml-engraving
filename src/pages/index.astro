@@ -1,11 +1,63 @@
 ---
-import Welcome from '../components/Welcome.astro';
+// import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import "../styles/global.css";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+  <link rel="stylesheet" href="/src/styles/global.css" />
+  
+  <section class="text-center py-10">
+    <h2 class="text-4xl font-bold mb-4">Turn Your Ideas Into Beautiful Custom Engravings</h2>
+    <p class="text-lg text-gray-600 mb-6">Custom designs, gifts, signage, and more.</p>
+    <a href="/contact" class="inline-block border border-white border-solid bg-black text-white px-6 py-2 hover:border-4 hover:shadow-[0_0_10px_3px_rgba(255,255,255,0.7)] hover:animate-pulse rounded">Request a Quote</a>
+  </section>
+
+  <div class="overflow-hidden relative w-full max-w-5xl mx-auto">
+  <div id="carousel" class="flex space-x-6 will-change-transform transition-transform duration-5000 ease-linear">
+    <img src="https://miro.medium.com/v2/resize:fit:1400/0*7_xkBtXrW051VYrB.jpg" alt="Engraving 1" class="w-64 h-40 object-cover rounded" />
+    <img src="https://woodlab.co/cdn/shop/files/IMG_4480.jpg?v=1699831870" alt="Engraving 2" class="w-64 h-40 object-cover rounded" />
+    <img src="https://wattsan.com/wp-content/uploads/screenshot_3-2.jpg" alt="Engraving 3" class="w-64 h-40 object-cover rounded" />
+    <img src="https://i.ytimg.com/vi/FV8mdsMWZgU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAkEsUHt8e_fr00KDG1lfpfIRHlDQ" alt="Engraving 4" class="w-64 h-40 object-cover rounded" />
+    <img src="https://chilemedia.com/wp-content/uploads/2022/03/chile-media-cutdting-board-laser-engraving.jpg" alt="Engraving 3" class="w-64 h-40 object-cover rounded" />
+    <img src="https://www.vikingsigns.co.uk/wp-content/uploads/600178_10151210172384348_2000804181_n.jpg" alt="Engraving 3" class="w-64 h-40 object-cover rounded" />
+    <!-- Duplicated images -->
+    <img src="https://miro.medium.com/v2/resize:fit:1400/0*7_xkBtXrW051VYrB.jpg" alt="Engraving 1" class="w-64 h-40 object-cover rounded" />
+    <img src="https://woodlab.co/cdn/shop/files/IMG_4480.jpg?v=1699831870" alt="Engraving 2" class="w-64 h-40 object-cover rounded" />
+    <img src="https://wattsan.com/wp-content/uploads/screenshot_3-2.jpg" alt="Engraving 3" class="w-64 h-40 object-cover rounded" />
+    <img src="https://i.ytimg.com/vi/FV8mdsMWZgU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAkEsUHt8e_fr00KDG1lfpfIRHlDQ" alt="Engraving 4" class="w-64 h-40 object-cover rounded" />
+    <img src="https://chilemedia.com/wp-content/uploads/2022/03/chile-media-cutdting-board-laser-engraving.jpg" alt="Engraving 3" class="w-64 h-40 object-cover rounded" />
+    <img src="https://www.vikingsigns.co.uk/wp-content/uploads/600178_10151210172384348_2000804181_n.jpg" alt="Engraving 3" class="w-64 h-40 object-cover rounded" />
+  </div>
+</div>
+
+  
+  <section class="py-10 max-w-5xl mx-auto">
+    <h2 class="text-3xl font-semibold mb-4">Why Choose Us?</h2>
+    <ul class="list-disc list-inside space-y-2">
+      <li>High-quality materials and craftsmanship</li>
+      <li>Fast turnaround times</li>
+      <li>Personalized service tailored to your needs</li>
+      <li>Competitive pricing without compromising quality</li>
+    </ul>
+  </section>
+  <section class="py-10 max-w-5xl mx-auto">
+    <h2 class="text-3xl font-semibold mb-4">Our Services</h2>
+    <ul class="list-disc list-inside space-y-2">
+      <li>Custom engraving on various materials</li>
+      <li>Personalized gifts for any occasion</li>
+      <li>Signage and branding solutions</li>
+      <li>Prototyping and product development</li>
+    </ul>
+  </section>
+  <section class="py-10 max-w-5xl mx-auto">
+    <h2 class="text-3xl font-semibold mb-4">Get Started Today!</h2>
+    <p class="text-lg text-gray-600 mb-6">Ready to bring your ideas to life? Contact us for a free quote and consultation.</p>
+    <a href="/contact" class="inline-block border border-white border-solid bg-black text-white px-6 py-2 hover:border-4 hover:shadow-[0_0_10px_3px_rgba(255,255,255,0.7)] hover:animate-pulse rounded">Request a Quote</a>
+  </section>
+
+  <script src="/src/scripts/carouselscript.js" type="module"></script>
 </Layout>
