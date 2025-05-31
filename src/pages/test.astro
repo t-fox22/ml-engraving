@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Auto Scrolling Carousel</title>
+  <style>
+    body {
+      background: black;
+      margin: 0;
+      padding: 2rem;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+    #carousel-container {
+      width: 600px;
+      overflow-x: scroll;
+      white-space: nowrap;
+      border: 2px solid white;
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none;  /* IE and Edge */
+    }
+    #carousel-container::-webkit-scrollbar {
+      display: none;
+    }
+    .carousel-item {
+      display: inline-block;
+      width: 150px;
+      height: 100px;
+      margin-right: 10px;
+      border-radius: 8px;
+      object-fit: cover;
+      user-select: none;
+      pointer-events: none; /* disables interaction, prevents dragging */
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Auto Scrolling Carousel</h1>
+  <div id="carousel-container">
+    <img class="carousel-item" src="https://miro.medium.com/v2/resize:fit:1400/0*7_xkBtXrW051VYrB.jpg" alt="1" />
+    <img class="carousel-item" src="https://woodlab.co/cdn/shop/files/IMG_4480.jpg?v=1699831870" alt="2" />
+    <img class="carousel-item" src="https://wattsan.com/wp-content/uploads/screenshot_3-2.jpg" alt="3" />
+    <img class="carousel-item" src="https://i.ytimg.com/vi/FV8mdsMWZgU/hq720.jpg" alt="4" />
+    <img class="carousel-item" src="https://miro.medium.com/v2/resize:fit:1400/0*7_xkBtXrW051VYrB.jpg" alt="1 duplicate" />
+    <img class="carousel-item" src="https://woodlab.co/cdn/shop/files/IMG_4480.jpg?v=1699831870" alt="2 duplicate" />
+    <img class="carousel-item" src="https://wattsan.com/wp-content/uploads/screenshot_3-2.jpg" alt="3 duplicate" />
+    <img class="carousel-item" src="https://i.ytimg.com/vi/FV8mdsMWZgU/hq720.jpg" alt="4 duplicate" />
+  </div>
+
+  <script>
+    const container = document.getElementById('carousel-container');
+    let scrollPosition = 0;
+    const scrollSpeed = 0.5; // lower is slower
+
+    function scrollCarousel() {
+        if(!container) return; // Ensure container exists
+      scrollPosition += scrollSpeed;
+      if(scrollPosition >= container.scrollWidth / 2) {
+        scrollPosition = 0;
+      }
+      container.scrollLeft = scrollPosition;
+      requestAnimationFrame(scrollCarousel);
+    }
+
+    // Start scrolling once the page loads
+    window.onload = () => {
+      scrollCarousel();
+    };
+  </script>
+
+</body>
+</html>

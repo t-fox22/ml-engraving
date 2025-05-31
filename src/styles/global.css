@@ -6,3 +6,35 @@
   height: 100px;
   margin: 0;
 }
+
+#carousel-container {
+  width: 80%;
+  overflow-x: scroll;
+  white-space: nowrap;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+#carousel-container::-webkit-scrollbar {
+  display: none;
+}
+.carousel-item {
+  display: inline-block;
+  width: 300px;
+  height: 200px;
+  margin-right: 10px;
+  border-radius: 8px;
+  object-fit: cover;
+  user-select: none;
+  pointer-events: none; /* disables interaction, prevents dragging */
+}
+
+@media (max-width: 768px) {
+  .carousel-item {
+    width: 225px;
+    height: 150px;
+    margin-right: 6px;
+  }
+}

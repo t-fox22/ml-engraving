@@ -1,0 +1,76 @@
+---
+import Layout from '../layouts/Layout.astro';
+import "../styles/global.css";
+
+// This will check for a query param to show success
+const url = new URL(Astro.request.url);
+const success = url.searchParams.get('success') === 'true';
+const error = url.searchParams.get('error') === 'true';
+---
+
+<Layout>
+  <h1 class="text-4xl font-bold text-center my-10 text-white">Contact Us</h1>
+  <p class="text-center text-gray-400 mb-8 max-w-xl mx-auto">
+    Have a custom engraving idea or a question about our services?<br>We&#39;d love to hear from you!
+  </p>
+  <hr class="border-gray-600 opacity-50 mb-10 w-4/5 md:w-2/3 mx-auto" />
+
+  {success && (
+    <p class="text-green-400 text-center font-semibold mb-4">✅ Your message was sent successfully!</p>
+  )}
+  {error && (
+    <p class="text-red-400 text-center font-semibold mb-4">⚠️ Something went wrong. Please try again.</p>
+  )}
+
+  <div class="max-w-xl mx-auto p-6 bg-gray-800 shadow-md rounded-lg w-[90%] sm:w-full">
+    <form action="/api/contact" method="POST" class="space-y-6">
+      <div>
+        <label for="name" class="block text-sm font-medium text-gray-200">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          class="mt-1 block w-full bg-gray-900 text-white border border-gray-700 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-600"
+        />
+      </div>
+
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-200">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          class="mt-1 block w-full bg-gray-900 text-white border border-gray-700 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-600"
+        />
+      </div>
+
+      <div>
+        <label for="message" class="block text-sm font-medium text-gray-200">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          required
+          class="mt-1 block w-full bg-gray-900 text-white border border-gray-700 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-600"
+        ></textarea>
+      </div>
+
+      <button
+        type="submit"
+        class="font-bold w-full bg-purple-600 hover:bg-purple-700 transition-colors text-white px-6 py-3 rounded-lg"
+      >
+        Send Message
+      </button>
+    </form>
+
+    <div class="text-sm text-gray-400 mt-6 text-center">
+      <p>Email us at: <a href="mailto:hello@midlandsengraving.com" class="text-blue-500 hover:underline">hello@midlandsengraving.com</a></p>
+      <p class="mt-2">Follow us on 
+        <a href="#" class="text-blue-500 hover:underline ml-1">Instagram</a> or 
+        <a href="#" class="text-blue-500 hover:underline ml-1">Facebook</a>
+      </p>
+    </div>
+  </div>
+</Layout>
