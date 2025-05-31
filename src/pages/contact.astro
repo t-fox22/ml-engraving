@@ -3,9 +3,9 @@ import Layout from '../layouts/Layout.astro';
 import "../styles/global.css";
 
 // This will check for a query param to show success
-const url = new URL(Astro.request.url);
-const success = url.searchParams.get('success') === 'true';
-const error = url.searchParams.get('error') === 'true';
+// const url = new URL(Astro.request.url);
+// const success = url.searchParams.get('success') === 'true';
+// const error = url.searchParams.get('error') === 'true';
 ---
 
 <Layout>
@@ -15,12 +15,12 @@ const error = url.searchParams.get('error') === 'true';
   </p>
   <hr class="border-gray-600 opacity-50 mb-10 w-4/5 md:w-2/3 mx-auto" />
 
-  {success && (
+  <!-- {success && (
     <p class="text-green-400 text-center font-semibold mb-4">✅ Your message was sent successfully!</p>
   )}
   {error && (
     <p class="text-red-400 text-center font-semibold mb-4">⚠️ Something went wrong. Please try again.</p>
-  )}
+  )} -->
 
   <div class="max-w-xl mx-auto p-6 bg-gray-800 shadow-md rounded-lg w-[90%] sm:w-full">
     <form action="/api/contact" method="POST" class="space-y-6">
