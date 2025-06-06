@@ -11,7 +11,7 @@ form?.addEventListener("submit", (e) => {
 
   const fullMessage = `Hello, my name is ${name}. My email is ${email}. ${messageText}`;
   // const phone = '353876336306';
-  const phone = "353851551827";
+  const phone = "353876336306";
   const url = `https://wa.me/${phone}?text=${fullMessage}`;
 
   window.open(url, "_blank");
