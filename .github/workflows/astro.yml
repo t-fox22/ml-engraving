@@ -27,6 +27,8 @@ concurrency:
 env:
   BUILD_PATH: "." # default value when not using subfolders
   # BUILD_PATH: subfolder
+  PUBLIC_WHATSAPP_NUMBER: ${{ vars.PUBLIC_WHATSAPP_NUMBER }}
+  PUBLIC_EMAIL_ADDRESS: ${{ vars.PUBLIC_EMAIL_ADDRESS }}
 
 jobs:
   build:
