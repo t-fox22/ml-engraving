@@ -1,6 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
+import img1 from "../images/img1.jpg";
+import img2 from "../images/img2.jpg";
+import img3 from "../images/img3.jpg";
+import img4 from "../images/img4.jpg";
+import img5 from "../images/img5.jpg";
+import img6 from "../images/img6.jpg";
 ---
 
 <Layout>
@@ -26,18 +32,18 @@ import "../styles/global.css";
     id="carousel-container"
   > -->
   <div id="carousel-container" class="flex space-x-6 px-4">
-    <img class="carousel-item" src="/src/images/img1.jpg" />
-    <img class="carousel-item" src="/src/images/img2.jpg" />
-    <img class="carousel-item" src="/src/images/img3.jpg" />
-    <img class="carousel-item" src="/src/images/img4.jpg" />
-    <img class="carousel-item" src="/src/images/img5.jpg" />
-    <img class="carousel-item" src="/src/images/img6.jpg" />
-    <img class="carousel-item" src="/src/images/img1.jpg" />
-    <img class="carousel-item" src="/src/images/img2.jpg" />
-    <img class="carousel-item" src="/src/images/img3.jpg" />
-    <img class="carousel-item" src="/src/images/img4.jpg" />
-    <img class="carousel-item" src="/src/images/img5.jpg" />
-    <img class="carousel-item" src="/src/images/img6.jpg" />
+    <img class="carousel-item" src={img1.src} />
+    <img class="carousel-item" src={img2.src} />
+    <img class="carousel-item" src={img3.src} />
+    <img class="carousel-item" src={img4.src} />
+    <img class="carousel-item" src={img5.src} />
+    <img class="carousel-item" src={img6.src} />
+    <img class="carousel-item" src={img1.src} />
+    <img class="carousel-item" src={img2.src} />
+    <img class="carousel-item" src={img3.src} />
+    <img class="carousel-item" src={img4.src} />
+    <img class="carousel-item" src={img5.src} />
+    <img class="carousel-item" src={img6.src} />
   </div>
 
   <section class="py-10 max-w-5xl mx-auto text-center md:text-left px-4">

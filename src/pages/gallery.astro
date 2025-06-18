@@ -1,6 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
+import img1 from "../images/img1.jpg";
+import img2 from "../images/img2.jpg";
+import img3 from "../images/img3.jpg";
+import img4 from "../images/img4.jpg";
+import img5 from "../images/img5.jpg";
+import img6 from "../images/img6.jpg";
 ---
 
 <Layout>
@@ -14,37 +20,37 @@ import "../styles/global.css";
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
         <div class="overflow-hidden rounded-lg shadow-sm">
           <img
-            src="/src/images/img1.jpg"
+            src={img1.src}
             class="w-full h-auto object-cover"
           />
         </div>
         <div class="overflow-hidden rounded-lg shadow-sm">
           <img
-            src="/src/images/img2.jpg"
+            src={img2.src}
             class="w-full h-auto object-cover"
           />
         </div>
         <div class="overflow-hidden rounded-lg shadow-sm">
           <img
-            src="/src/images/img3.jpg"
+            src={img3.src}
             class="w-full h-auto object-cover"
           />
         </div>
         <div class="overflow-hidden rounded-lg shadow-sm">
           <img
-            src="/src/images/img4.jpg"
+            src={img4.src}
             class="w-full h-auto object-cover"
           />
         </div>
         <div class="overflow-hidden rounded-lg shadow-sm">
           <img
-            src="/src/images/img5.jpg"
+            src={img5.src}
             class="w-full h-auto object-cover"
           />
         </div>
         <div class="overflow-hidden rounded-lg shadow-sm">
           <img
-            src="/src/images/img6.jpg"
+            src={img6.src}
             class="w-full h-auto object-cover"
           />
         </div>

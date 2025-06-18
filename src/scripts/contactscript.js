@@ -9,7 +9,7 @@ form?.addEventListener("submit", (e) => {
     document.getElementById("message")?.value || ""
   );
 
-  const fullMessage = `Hello, my name is ${name}. My email is ${email}. ${messageText}`;
+  const fullMessage = `Hello, my name is ${name}. ${messageText}`;
   // const phone = '353876336306';
   const phone = "353876336306";
   const url = `https://wa.me/${phone}?text=${fullMessage}`;
