@@ -7,6 +7,8 @@ import 'dotenv/config';
 // https://astro.build/config
 export default defineConfig({
   vite: { plugins: [tailwindcss()] },
-  site: 'https://t-fox22.github.io/',
-  base: '/ml-engraving/',
+  site: 'https://www.midlandslaserengraving.com',
+  base: '/',
+  // site: 'https://t-fox22.github.io/',
+  // base: '/ml-engraving/',
 });
